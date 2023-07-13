@@ -2,14 +2,14 @@ def is_anagram(first_string, second_string):
     insensitive_first = first_string.lower()
     insensitive_second = second_string.lower()
 
-    if insensitive_first == "" and insensitive_second == "":
-        return False
-
-    if len(insensitive_first) != len(insensitive_second):
-        return False
-
     sorted_first = ''.join(insertion_sort(insensitive_first))
     sorted_second = ''.join(insertion_sort(insensitive_second))
+
+    if insensitive_first == "" and insensitive_second == "":
+        return False
+    
+    if len(insensitive_first) != len(insensitive_second):
+        return (sorted_first, sorted_second, sorted_first == sorted_second)
 
     return (sorted_first, sorted_second, sorted_first == sorted_second)
 
@@ -25,3 +25,6 @@ def insertion_sort(string):
         sorted_string[j + 1] = key
     
     return (''.join(sorted_string))
+
+result = is_anagram('amor', '')
+print(result)
