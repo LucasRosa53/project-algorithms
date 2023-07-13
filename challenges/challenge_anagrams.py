@@ -1,9 +1,9 @@
 def is_anagram(first_string, second_string):
-    if not isinstance(first_string, str) or not isinstance(second_string, str):
-        return False
-    
     insensitive_first = first_string.lower()
     insensitive_second = second_string.lower()
+
+    if insensitive_first == "" and insensitive_second == "":
+        return False
 
     if len(insensitive_first) != len(insensitive_second):
         return False
