@@ -7,7 +7,7 @@ def is_anagram(first_string, second_string):
 
     if insensitive_first == "" and insensitive_second == "":
         return False
-    
+
     if len(insensitive_first) != len(insensitive_second):
         return (sorted_first, sorted_second, sorted_first == sorted_second)
 
@@ -23,8 +23,5 @@ def insertion_sort(string):
             sorted_string[j + 1] = sorted_string[j]
             j -= 1
         sorted_string[j + 1] = key
-    
-    return (''.join(sorted_string))
 
-result = is_anagram('amor', '')
-print(result)
+    return (''.join(sorted_string))
