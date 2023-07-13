@@ -10,6 +10,6 @@ def is_palindrome_recursive(word, low_index, high_index):
     
     return False
 
+
 def is_palindrome(word):
-    
     return is_palindrome_recursive(word, 0, len(word) - 1)
